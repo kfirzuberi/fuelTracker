@@ -1,6 +1,8 @@
 
 import React, { Component } from 'react';
 import { View, Button, TextInput, Text, ActivityIndicator, StyleSheet } from "react-native";
+import { signInDispatcher } from "../../dispatchers/auth";
+import { connect } from 'react-redux';
 
 class SignIn extends Component {
     constructor(props) {
@@ -13,7 +15,7 @@ class SignIn extends Component {
     }
 
     handleOnSignIn = event => {
-        this.setState({ isLoading: !this.state.isLoading })
+        this.props.signIn(this.state);
     }
 
     render() {
@@ -41,5 +43,13 @@ const styles = StyleSheet.create({
     text: { color: "#ffffff", fontSize: 32, backgroundColor: "#01579b", paddingTop: 20, paddingBottom: 20, textAlign: "center" }
 });
 
+const mapStateToProps = state => ({
 
-export default SignIn;
+})
+
+const mapDispatchToProps = dispatch => ({
+    signIn: userData => dispatch(signInDispatcher(userData))
+})
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(SignIn)
