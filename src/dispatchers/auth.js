@@ -29,7 +29,7 @@ export const signOutDispatcher = () => {
 export const signUpDispatcher = userData => {
     return async dispatch => {
         const { email, password } = userData;
-        
+        console.log(userData)
         try {
             console.log('signUpDispatcher', email, password)
             await signUp(email, password)
