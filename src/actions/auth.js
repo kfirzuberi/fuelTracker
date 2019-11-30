@@ -20,8 +20,16 @@ const signOut = () => {
     };
 };
 
+const authStateChanged = user => {
+    return {
+        type: types.AUTH_STATE_CHANGED,
+        value: user
+    };
+};
+
 export default {
     signUp,
     signIn,
-    signOut
+    signOut,
+    authStateChanged
 }

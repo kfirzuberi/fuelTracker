@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "344176578969",
+    "firebase_url": "https://fuel-tracker-d2a94.firebaseio.com",
+    "project_id": "fuel-tracker-d2a94",
+    "storage_bucket": "fuel-tracker-d2a94.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:344176578969:android:580126d9db40bb53f74308",
+        "android_client_info": {
+          "package_name": "com.fueltracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "344176578969-5de05uuq9mn0or8h0feh1s5772cr6f5q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBd8jTPhHRyUWvvrZ1R8dB5AyQK_12rP6I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "344176578969-5de05uuq9mn0or8h0feh1s5772cr6f5q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

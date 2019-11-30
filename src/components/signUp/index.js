@@ -1,14 +1,12 @@
 
 import React, { Component } from 'react';
 import { View, Button, TextInput, Text, ActivityIndicator, StyleSheet } from "react-native";
-import { signInDispatcher } from "../../dispatchers/auth";
+import { signUpDispatcher } from "../../dispatchers/auth";
 import { connect } from 'react-redux';
-import NavigationService from "../../services/navigationService";
 
-class SignIn extends Component {
+class SignUp extends Component {
     constructor(props) {
         super(props);
-
         this.state = {
             email: '',
             password: '',
@@ -16,8 +14,8 @@ class SignIn extends Component {
         };
     }
 
-    handleOnSignIn = event => {
-        this.props.signIn(this.state);
+    handleOnSignUp = event => {
+        this.props.signUp(this.state);
     }
 
     render() {
@@ -25,14 +23,13 @@ class SignIn extends Component {
 
         return (
             <View style={styles.container}>
-                <Text h1 style={styles.text}>Sign In</Text>
+                <Text h1 style={styles.text}>Sign Up</Text>
                 <TextInput placeholder="Email address..." style={styles.textInput}
                     onChangeText={(email) => this.setState({ email })} />
                 <TextInput secureTextEntry placeholder="Password..." style={styles.textInput}
                     onChangeText={(password) => this.setState({ password })} />
 
-                <Button color="#01579B" title="SIGN IN" onPress={this.handleOnSignIn} />
-                <Button title="SIGN UP" onPress={()=>NavigationService.navigate('SignUp')} />
+                <Button color="#01579B" title="SIGN UP" onPress={this.handleOnSignUp} />
 
                 {isLoading}
             </View>
@@ -51,7 +48,8 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-    signIn: userData => dispatch(signInDispatcher(userData)),
+    signUp: userData => dispatch(signUpDispatcher(userData))
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(SignIn)
+
+export default connect(mapStateToProps, mapDispatchToProps)(SignUp)

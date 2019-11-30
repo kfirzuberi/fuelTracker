@@ -17,17 +17,17 @@ const headerStyle = {
 
 // views for signed out state
 export const SignedOut = createStackNavigator({
-    SignUp: {
-        screen: SignUpView,
-        navigationOptions: {
-            title: "Sign Up",
-            headerStyle
-        }
-    },
     SignIn: {
         screen: SignInView,
         navigationOptions: {
             title: "Sign In",
+            headerStyle
+        }
+    },
+    SignUp: {
+        screen: SignUpView,
+        navigationOptions: {
+            title: "Sign Up",
             headerStyle
         }
     }
